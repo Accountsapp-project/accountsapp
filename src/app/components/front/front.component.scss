@@ -1,0 +1,25 @@
+.content{
+    --background :linear-gradient(to bottom right, #101820 50%, #fee715 100%);
+  }
+
+#login{
+    --color: #101820;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100%;
+    --background: #fee715;
+    font-weight: bold;
+    --background-activated:#101820;
+    --color-activated:#fee715;
+}
+
+#signup{
+    margin-top: 5%;
+    --color: #101820;
+    margin-left: 10%;
+    margin-right: 10%;
+    --background: #fee715;
+    font-weight: bold;
+    --background-activated:#101820;
+    --color-activated:#fee715;
+}

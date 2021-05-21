@@ -1,20 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+<ion-content class="content">
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide>
+      <h1>Split up and save with your peers</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Sharing money made easier</h1>
+    </ion-slide>
+    <ion-slide>
+      <h1>Manage your transactions efficiently</h1>
+    </ion-slide>
+  </ion-slides>
+  <button id="skip" (click)="gotoFront()">skip</button>
 </ion-content>
