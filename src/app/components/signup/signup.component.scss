@@ -1,0 +1,64 @@
+.content{
+    --background :linear-gradient(to bottom right, #101820 50%, #fee715 100%);
+  }
+
+  #back{
+      margin-top: 15%;
+      margin-left: 5%;
+      --color: #fee715;
+      --background: transparent;
+      --background-activated:#fee715;
+      --color-activated:#101820;
+  }
+  
+  .content h1{
+    margin-top: 20%;
+    margin-left: 37%;
+    background-color: #fee715;
+    color: #101820;
+    margin-right: 37%;
+    text-align: center;
+    box-shadow:3px 3px #555028;
+   padding-top: 1mm;
+   font-weight: bold;
+  
+  }
+
+  #signup{
+    margin-left: 75%;
+    margin-top: 17%;
+    font-size: larger;  
+    background-color: #101820;
+    color: #fee715;
+    padding-top: 2mm;
+    padding-bottom: 2mm;
+  }
+ #username{
+     --background: #101820;
+     color: #fee715;
+     margin-top: 50px;
+     margin-left: 10%;
+     margin-right: 10%;
+ }
+ #email{
+    --background: #101820;
+    color: #fee715;
+    margin-top: 20px;
+    margin-left: 10%;
+     margin-right: 10%;
+ }
+
+ #password{
+    --background: #101820;
+    color: #fee715;
+     margin-top: 20px;
+     margin-left: 10%;
+     margin-right: 10%;
+ }
+ #phone{
+    --background: #101820;
+    color: #fee715;
+     margin-top: 20px;
+     margin-left: 10%;
+     margin-right: 10%;
+ }
