@@ -1,5 +1,15 @@
 <ion-content class="content">
-  <h1>Login</h1>
-  <ion-input id="emailinput" placeholder="Enter email"></ion-input>
-
+  <ion-button id="back" (click)="gotofront()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
+  <h1>Login Menu</h1>
+  <form (ngSubmit)="gotomainpage()">
+  <ion-item id="username">
+    <ion-label position="stacked" >Username<ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required type="text" ></ion-input>
+  </ion-item>
+  <ion-item id="password">
+    <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
+    <ion-input required type="text" ></ion-input>
+  </ion-item>
+  <button id="Login" (click)="gotomainpage()" ion-button type="submit" block>Login!</button>
+  </form> 
 </ion-content>
