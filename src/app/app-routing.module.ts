@@ -4,6 +4,7 @@ import {LoginComponent} from './components/login/login.component'
 import { FrontComponent } from './components/front/front.component';
 import { HomePage } from './home/home.page';
 import { SignupComponent } from './components/signup/signup.component';
+import { MainpageComponent } from './components/mainpage/mainpage.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -17,7 +18,8 @@ const routes: Routes = [
   {path : 'home' ,component:HomePage},
   {path : 'login',component:LoginComponent},
   {path : 'front',component:FrontComponent},
-  {path : 'signup',component:SignupComponent}
+  {path : 'signup',component:SignupComponent},
+  {path: 'mainpage',component:MainpageComponent}
 ];
 
 @NgModule({
