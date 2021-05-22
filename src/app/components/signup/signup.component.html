@@ -7,19 +7,19 @@
   <form (ngSubmit)="gotoLogin()">
     <ion-item id="username">
       <ion-label position="stacked" >Username<ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="text" ></ion-input>
+      <ion-input required type="text"  [(ngModel)] = "user.username" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
     <ion-item id="email">
       <ion-label position="stacked">Email<ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="email" ></ion-input>
+      <ion-input required type="email" [(ngModel)] = "user.email" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
     <ion-item id="password">
       <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="text" ></ion-input>
+      <ion-input required type="text" [(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}"></ion-input>
     </ion-item>
     <ion-item id="phone">
       <ion-label position="stacked">Phone number<ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="text" ></ion-input>
+      <ion-input required type="text" [(ngModel)] = "user.phone" [ngModelOptions]="{standalone: true}" ></ion-input>
     </ion-item>
       <button id="signup" ion-button type="submit" block>Sign up</button>
   </form>

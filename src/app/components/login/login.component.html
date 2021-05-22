@@ -1,15 +1,15 @@
 <ion-content class="content">
   <ion-button id="back" (click)="gotofront()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
-  <h1>Login Menu</h1>
+  <h1>Login</h1>
   <form (ngSubmit)="gotomainpage()">
   <ion-item id="username">
     <ion-label position="stacked" >Username<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input required type="text" ></ion-input>
+    <ion-input required type="text" [(ngModel)] = "user.username" [ngModelOptions]="{standalone: true}" ></ion-input>
   </ion-item>
   <ion-item id="password">
     <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input required type="text" ></ion-input>
+    <ion-input required type="text" [(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}"></ion-input>
   </ion-item>
-  <button id="Login" (click)="gotomainpage()" ion-button type="submit" block>Login!</button>
+  <button id="Login"  ion-button type="submit" block>Login!</button>
   </form> 
 </ion-content>
