@@ -10,8 +10,9 @@ import {LoginComponent} from './components/login/login.component'
 import {FrontComponent} from './components/front/front.component'
 import {SignupComponent} from './components/signup/signup.component'
 import { FormsModule } from '@angular/forms';
+import {MainpageComponent} from './components/mainpage/mainpage.component'
 @NgModule({
-  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent],
+  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent,MainpageComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,RouterModule,HttpClientModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
