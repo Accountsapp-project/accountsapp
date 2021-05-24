@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mainpage',
@@ -6,9 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./mainpage.component.scss'],
 })
 export class MainpageComponent implements OnInit {
-
-  constructor() { }
+ 
+  constructor(private router : Router) { }
 
   ngOnInit() {}
-
+  gotoprofile()
+  {
+    this.router.navigate(['profile']);
+  }
 }

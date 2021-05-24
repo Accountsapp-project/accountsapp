@@ -1,4 +1,25 @@
 ion-content{
-    --background :linear-gradient(to bottom right, #101820 50%, #fee715 100%);
+    --background :#B9E4C9;
     color:white;
+}
+
+#profilepic{
+    
+    color: black;
+    --background: transparent;
+    --background-activated:transparent;
+}
+#searchbut{
+    margin-left: 70%;
+    color: black;
+    --background: transparent;
+    --background-activated:transparent;
+}
+#header-items{
+    --background:#356859;
+}
+#menubut{
+    --background: transparent;
+    --background-activated:transparent;
+    color:black;
 }
