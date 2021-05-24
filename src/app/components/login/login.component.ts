@@ -12,6 +12,9 @@ export class LoginComponent implements OnInit {
   constructor(private _router :Router,private _reg_service : RegistrationService) { }
   user = new User();
   ngOnInit() {}
+
+  showPassword =false;
+  passwordIcon = "eye";
     gotofront(){
       this._router.navigate(['front'])
     }
