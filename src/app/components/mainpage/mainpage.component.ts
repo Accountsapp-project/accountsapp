@@ -10,7 +10,9 @@ import { MenuController } from '@ionic/angular';
 export class MainpageComponent implements OnInit {
  
   constructor(private router : Router ,private menu:MenuController) { }
-
+  
+  showSearch = true
+  showTitle = false
   ngOnInit() {}
   gotoprofile()
   {
@@ -20,5 +22,10 @@ export class MainpageComponent implements OnInit {
   openMenu(){
     this.menu.enable(true,'mainpage-menu');
     this.menu.open('mainpage-menu')
+  }
+
+  openSearch(){
+    this.showSearch = !this.showSearch
+    this.showTitle = !this.showTitle
   }
 }
