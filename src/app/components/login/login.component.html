@@ -1,6 +1,6 @@
 <ion-content class="content">
   <ion-button id="back" (click)="gotofront()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
-  <h1>Login</h1>
+  <h1>Welcome!</h1>
   <form (ngSubmit)="gotomainpage()">
   <ion-item id="username">
     <ion-label position="stacked" >Username<ion-text color="danger">*</ion-text></ion-label>
@@ -9,8 +9,8 @@
   <ion-item id="password">
     <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
     <ion-input required type="password" > </ion-input>
-    <ion-icon slot="end" [name]="passwordIcon" style="margin-top: 7mm;"></ion-icon>
+    <ion-icon slot="end" [name]="passwordIcon" style="margin-top: 7mm;color: #356859;"></ion-icon>
   </ion-item>
-  <button id="Login"  ion-button type="submit" (click)="gotomainpage()" block>Login!</button>
+  <button id="Login"  ion-button type="submit" (click)="gotomainpage()" block>Login</button>
   </form> 
 </ion-content>

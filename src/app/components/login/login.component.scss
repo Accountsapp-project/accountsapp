@@ -1,26 +1,24 @@
 .content{
-  --background :linear-gradient(to bottom right, #101820 50%, #fee715 100%);
+  --background :#B9E4C9;
 }
 
 #back{
-    margin-top: 15%;
+    margin-top: 5%;
     margin-left: 5%;
-    --color: #fee715;
+    --color: #356859;
     --background: transparent;
-    --background-activated:#fee715;
+    --background-activated:#356859;
     --color-activated:#101820;
 }
 
 .content h1{
   margin-top: 20%;
-  margin-left: 37%;
-  background-color: #fee715;
-  color: #101820;
-  margin-right: 37%;
+  
+  background-color: transparent;
+  color:#356859;
+ 
   text-align: center;
-  box-shadow:3px 3px #555028;
- padding-top: 1mm;
- padding-bottom: 1mm;
+
  font-weight: bold;
 
 }
@@ -29,22 +27,31 @@
   margin-left: 75%;
   margin-top: 17%;
   font-size: larger;  
-  background-color: #101820;
-  color: #fee715;
+  background-color:#356859;
+  color: #B9E4C9;
   padding-top: 2mm;
   padding-bottom: 2mm;
 }
 #username{
-   --background: #101820;
-   color: #fee715;
+  border: 3px solid;
+   --background: #fffbe6;
+   border-color: #356859;
+   color: #356859;
+   font-weight:bold;
+   font-size: larger;
    margin-top: 70px;
    margin-left: 10%;
    margin-right: 10%;
-  
+   
+
 }
 #password{
-  --background: #101820;
-  color: #fee715;
+  border: 3px solid;
+  --background: #fffbe6;
+  border-color: #356859;
+  color: #356859;
+  font-weight:bold;
+  font-size: larger;
    margin-top: 30px;
    margin-left: 10%;
    margin-right: 10%;

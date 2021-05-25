@@ -4,22 +4,24 @@ ion-content{
 }
 
 #profilepic{
-    
-    color: black;
+    font-size:medium;
+    color:#B9E4C9;
     --background: transparent;
     --background-activated:transparent;
 }
 #searchbut{
-    margin-left: 70%;
-    color: black;
+    font-size: medium;
+    margin-left: 40%;
+    color:#B9E4C9;
     --background: transparent;
     --background-activated:transparent;
 }
-#header-items{
+#header{
     --background:#356859;
 }
 #menubut{
+    font-size: medium;
     --background: transparent;
     --background-activated:transparent;
-    color:black;
+    color:#B9E4C9;
 }

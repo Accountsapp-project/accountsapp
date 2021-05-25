@@ -1,25 +1,25 @@
 .content{
-    --background :linear-gradient(to bottom right, #101820 50%, #fee715 100%);
+    --background :#B9E4C9;
   }
 
 #login{
-    --color: #101820;
+    --color: #B9E4C9;
     margin-left: 10%;
     margin-right: 10%;
     margin-top: 100%;
-    --background: #fee715;
+    --background: #356859;
     font-weight: bold;
-    --background-activated:#101820;
-    --color-activated:#fee715;
+    --background-activated:#37966f;
+    --color-activated:#356859;
 }
 
 #signup{
     margin-top: 5%;
-    --color: #101820;
+    --color: #B9E4C9;
     margin-left: 10%;
     margin-right: 10%;
-    --background: #fee715;
+    --background: #356859;
     font-weight: bold;
-    --background-activated:#101820;
-    --color-activated:#fee715;
+    --background-activated:#37966f;
+    --color-activated:#356859;
 }
