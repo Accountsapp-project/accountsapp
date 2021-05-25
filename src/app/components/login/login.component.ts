@@ -21,6 +21,15 @@ export class LoginComponent implements OnInit {
     {
       this._router.navigate(['mainpage']);
     }
-  
-
+    
+    showPasswordIcon(){
+      this.showPassword = !this.showPassword;
+      if (this.passwordIcon == 'eye') {
+        this.passwordIcon = 'eye-off';
+      }
+      else{
+        this.passwordIcon = 'eye';
+      }
+    }
+    
 }

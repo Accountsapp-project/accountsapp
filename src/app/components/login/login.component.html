@@ -8,8 +8,8 @@
   </ion-item>
   <ion-item id="password">
     <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input required type="password" > </ion-input>
-    <ion-icon slot="end" [name]="passwordIcon" style="margin-top: 7mm;color: #356859;"></ion-icon>
+    <ion-input required [type]="showPassword ? 'text' : 'password'" > </ion-input>
+    <ion-icon slot="end" [name]="passwordIcon" (click)="showPasswordIcon()" style="margin-top: 7mm;color: #356859;"></ion-icon>
   </ion-item>
   <button id="Login"  ion-button type="submit" (click)="gotomainpage()" block>Login</button>
   </form> 
