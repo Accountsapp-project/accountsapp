@@ -1,0 +1,36 @@
+#back{
+    --background: transparent;
+    --background-activated:transparent;
+    color:black;
+}
+
+ion-content{
+    --background:#66ccff;
+}
+
+p{
+    font-family: "Times New Roman";
+    margin-left: 30%;
+    margin-top: 7%;
+    font-weight: bold;
+    font-size: 20px;   
+}
+#Editprofile{
+    --color: #101820;
+    margin-left: 17%;
+    margin-right: 10%;
+    margin-top: 100%;
+    --background:#008080;
+    font-weight: bold;
+    --background-activated:transparent;
+    --color-activated: black;
+}
+#settingsbut{
+    margin-left: 75%;
+    margin-top:2mm;
+    font-size: 1.5em;
+}
+#proficon{
+    margin-left: 45%;
+    font-size: 3.5em;
+}

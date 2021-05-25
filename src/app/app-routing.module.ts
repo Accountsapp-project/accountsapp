@@ -6,6 +6,7 @@ import { HomePage } from './home/home.page';
 import { SignupComponent } from './components/signup/signup.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { ProfileeditComponent } from './components/profileedit/profileedit.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path : 'front',component:FrontComponent},
   {path : 'signup',component:SignupComponent},
   {path: 'mainpage',component:MainpageComponent},
-  {path : 'profile',component:ProfileComponent}
+  {path : 'profile',component:ProfileComponent},
+  {path : 'profileedit',component:ProfileeditComponent}
 ];
 
 @NgModule({

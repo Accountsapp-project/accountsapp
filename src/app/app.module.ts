@@ -12,9 +12,10 @@ import {SignupComponent} from './components/signup/signup.component'
 import { FormsModule } from '@angular/forms';
 import {MainpageComponent} from './components/mainpage/mainpage.component'
 import { ProfileComponent } from './components/profile/profile.component';
+import {ProfileeditComponent}from './components/profileedit/profileedit.component';
 import { MainpagemenuComponent } from './components/mainpagemenu/mainpagemenu.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent,MainpageComponent,ProfileComponent,MainpagemenuComponent],
+  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent,MainpageComponent,ProfileComponent,MainpagemenuComponent,ProfileeditComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,RouterModule,HttpClientModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
