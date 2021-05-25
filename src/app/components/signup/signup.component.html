@@ -15,7 +15,8 @@
     </ion-item>
     <ion-item id="password">
       <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-      <ion-input required type="text" [(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-input required [type]="showPassword ? 'text' : 'password'"  [(ngModel)] = "user.password" [ngModelOptions]="{standalone: true}"></ion-input>
+      <ion-icon slot="end" [name]="passwordIcon" (click)="showPasswordIcon()" style="margin-top: 7mm;color: #356859;"></ion-icon>
     </ion-item>
     <ion-item id="phone">
       <ion-label position="stacked">Phone number<ion-text color="danger">*</ion-text></ion-label>

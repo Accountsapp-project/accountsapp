@@ -11,7 +11,8 @@ import { RegistrationService } from 'app/service/registration.service';
 export class SignupComponent implements OnInit {
   user = new User();
   constructor(private _router:Router,private _reg_service:RegistrationService) { }
-
+  showPassword =false;
+  passwordIcon = "eye";
   ngOnInit() {}
   gotoLogin(){
      this._reg_service.resgisterAsUser(this.user).subscribe(
@@ -27,5 +28,15 @@ export class SignupComponent implements OnInit {
   }
   gotoFront(){
     this._router.navigate(['front'])
+  }
+
+  showPasswordIcon(){
+    this.showPassword = !this.showPassword;
+    if (this.passwordIcon == 'eye') {
+      this.passwordIcon = 'eye-off';
+    }
+    else{
+      this.passwordIcon = 'eye';
+    }
   }
 }
