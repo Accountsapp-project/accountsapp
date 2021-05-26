@@ -8,7 +8,7 @@ import { RegistrationService } from 'app/service/registration.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-
+  user=new User();
   constructor(private _router :Router,private _reg_service : RegistrationService) { }
   ngOnInit() {}
 
@@ -19,7 +19,16 @@ export class LoginComponent implements OnInit {
     }
     gotomainpage()
     {
-      this._router.navigate(['mainpage']);
+      //this._router.navigate(['mainpage']);
+      this._reg_service.loginUserFromRemote(this.user).subscribe(
+        data =>{
+        console.log("You have Logged in");
+        this._router.navigate(['mainpage']);
+      },
+        error =>{
+          console.log("Error: You have not logged in.")
+        }
+      )
     }
     
     showPasswordIcon(){
