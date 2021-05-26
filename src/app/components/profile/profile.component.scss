@@ -1,36 +1,65 @@
 #back{
+    margin-top: 5mm;
     --background: transparent;
     --background-activated:transparent;
-    color:black;
+    color:#356859;
 }
 
 ion-content{
-    --background:#66ccff;
+    --background:#B9E4C9;
 }
 
 p{
-    font-family: "Times New Roman";
-    margin-left: 30%;
+   color: #356859;
+    margin-left: 33%;
     margin-top: 7%;
     font-weight: bold;
     font-size: 20px;   
 }
 #Editprofile{
-    --color: #101820;
-    margin-left: 17%;
-    margin-right: 10%;
-    margin-top: 100%;
-    --background:#008080;
+    --color:#B9E4C9;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 15%;
+    --background:#356859;
     font-weight: bold;
-    --background-activated:transparent;
-    --color-activated: black;
+    --background-activated:#37966f;
+    --color-activated:#356859;;
 }
 #settingsbut{
-    margin-left: 75%;
+    color: #356859;
+    margin-left: 80%;
     margin-top:2mm;
     font-size: 1.5em;
 }
 #proficon{
-    margin-left: 45%;
-    font-size: 3.5em;
+    margin-left: 35%;
+    font-size: 8em;
 }
+
+
+
+#emailtitle ,#phonetitle,#nametitle{
+    --background: transparent;
+    color: #356859;
+    font-size: larger;
+    font-weight: bold;
+    margin-top: .5em;
+    margin-left: 1em;
+}
+
+
+
+#name,#email,#phone{
+    border: 3px solid;
+   --background: #fffbe6;
+   border-color: #356859;
+   color: #356859;
+   font-weight:bold;
+   font-size: larger;
+   margin-left: 2em;
+   margin-right: 2em;
+}
+
+
+

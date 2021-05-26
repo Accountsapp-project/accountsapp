@@ -1,10 +1,30 @@
 <ion-content>
-  <ion-button id="back" (click)="gotomainpage()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
+  <ion-item style="--background: transparent;" lines="none">
+    <ion-button id="back" (click)="gotomainpage()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
   <ion-icon id="settingsbut" name="settings"></ion-icon>
+  </ion-item>
   <p>USER PROFILE</p>
     <ion-icon id="proficon" name="person-circle-outline"></ion-icon>
+    <ion-item id="nametitle" lines="none">
+      <ion-label>Username</ion-label>
+    </ion-item>
+    <ion-item id="name">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item id="emailtitle" lines="none">
+      <ion-label>Email</ion-label>
+    </ion-item>
+    <ion-item id="email">
+      <ion-label></ion-label>
+    </ion-item>
+    <ion-item id="phonetitle" lines="none">
+      <ion-label>Phone number</ion-label>
+    </ion-item>
+    <ion-item id="phone">
+      <ion-label></ion-label>
+    </ion-item>
     <ion-button expand="full" id="Editprofile" (click)="gotoprofileedit()">
      EDIT PROFILE 
-     <ion-icon id="penc" style="margin-left: 10%;" name="pencil-outline"></ion-icon>
+     <ion-icon  style="margin-left: 10%;" name="pencil"></ion-icon>
     </ion-button> 
 </ion-content>
