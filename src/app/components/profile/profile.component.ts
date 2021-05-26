@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { User } from 'app/class/user/user';
+import { RegistrationService } from 'app/service/registration.service';
+import { LoginComponent } from '../login/login.component';
 
 @Component({
   selector: 'app-profile',
@@ -7,10 +10,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./profile.component.scss'],
 })
 export class ProfileComponent implements OnInit {
+  user=new User();
+  constructor(private router:Router,private _reg_service : RegistrationService) { }
 
-  constructor(private router:Router) { }
-
-  ngOnInit() {}
+  ngOnInit() {
+    this._reg_service.$isLoggedIn.subscribe(
+      data=>{
+          this.user.username=data;
+    },
+    error=>{
+      console.log("Not found");
+    }
+    )
+    
+  }
 gotomainpage(){
   this.router.navigate(["mainpage"]);
 }

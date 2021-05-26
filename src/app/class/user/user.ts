@@ -1,6 +1,6 @@
 export class User {
-    email :String;
-    username :String;
-    password:String;
-    phone :String
+    email :string;
+    username :string;
+    password:string;
+    phone :string
 }
