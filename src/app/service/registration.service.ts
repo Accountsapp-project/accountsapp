@@ -15,7 +15,7 @@ export class RegistrationService {
   constructor(private _http : HttpClient,private router:Router) { }
 
   public loginUserFromRemote(user : User):Observable<any>{
-    return this._http.post<any>("http://localhost:8091/login",user);
+    return this._http.post<any>("http://localhost:8080/login",user);
   }
   
   public gotomainpage()
@@ -34,6 +34,6 @@ export class RegistrationService {
       )
     }
   public resgisterAsUser(user : User):Observable<any>{
-    return this._http.post<any>("http://localhost:8091/signup",user)
+    return this._http.post<any>("http://localhost:8080/signup",user)
 }
 }
