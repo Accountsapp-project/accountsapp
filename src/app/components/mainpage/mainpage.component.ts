@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
+import { ProfileComponent } from '../profile/profile.component';
 
 @Component({
   selector: 'app-mainpage',
@@ -15,9 +16,11 @@ export class MainpageComponent implements OnInit {
   showTitle = false
   ngOnInit() {}
   gotoprofile()
-  {
+  { 
+    
     this.router.navigate(['profile']);
   }
+  
 
   openMenu(){
     this.menu.enable(true,'mainpage-menu');

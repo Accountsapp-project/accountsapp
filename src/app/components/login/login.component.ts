@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'app/class/user/user';
 import { RegistrationService } from 'app/service/registration.service';
-import * as EventEmitter from 'events';
+import {EventEmitter} from '@angular/core'
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-login',
@@ -14,18 +14,30 @@ export class LoginComponent implements OnInit {
   constructor(private _router :Router,private _reg_service : RegistrationService) { }
   ngOnInit() {}
 
-  $isLoggedIn=new EventEmitter();
   showPassword =false;
   passwordIcon = "eye";
     gotofront(){
       this._router.navigate(['front'])
     }
     
-    gotomainpage(){
-      this._reg_service.gotomainpage();
+    
+    
+   gotomainpage()
+  {
+    this._reg_service.loginUserFromRemote(this.user).subscribe(
+      data =>{
+      this._reg_service.updateData(this.user.username);
+      console.log("You have Logged in");
+      this._router.navigate(['mainpage']);
+     
+    },
+      error =>{
+        console.log("Error: You have not logged in.")
+      }
+    )
   }
-    
-    
+
+
     
     showPasswordIcon(){
       this.showPassword = !this.showPassword;
