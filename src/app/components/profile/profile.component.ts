@@ -14,15 +14,21 @@ export class ProfileComponent implements OnInit {
   constructor(private router:Router,private _reg_service : RegistrationService) { }
 
   ngOnInit() {
-    this._reg_service.share.subscribe(
-      data =>{
-        this.user.username = data
-        console.log(this.user.username)
-      }
+    // this._reg_service.sharedUsername.subscribe(
+    //   data =>{
+    //     this.user.username = data
+    //     console.log(this.user.username)
+    //   }
+    // )
+    this._reg_service.sharedUser.subscribe(
+        data =>{
+          this.user = data
+        }
     )
   }
 
-
+  
+ 
 gotomainpage(){
   this.router.navigate(["mainpage"]);
 }

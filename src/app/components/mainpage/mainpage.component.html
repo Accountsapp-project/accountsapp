@@ -1,11 +1,15 @@
 
 <ion-content>
-    <ion-item id="header">  
+    <ion-item lines="none" id="header">  
         <ion-button id="menubut" (click)="openMenu()" ><ion-icon name="menu"></ion-icon></ion-button>
         <div [hidden]="showTitle" style="color: #B9E4C9;">Accountsapp</div>
         <ion-button [hidden]="showTitle" (click)="openSearch()" id="searchbut" ><ion-icon name="search"></ion-icon></ion-button>
-        <ion-searchbar [hidden]="showSearch" ></ion-searchbar>
-        <ion-button id="profilepic" (click)="gotoprofile()"><ion-icon  name="person"></ion-icon></ion-button>
-        
-</ion-item>
+        <ion-searchbar style="--background:transparent" (ionChange)="ionchange($event)" debounce="500" [hidden]="showSearch" ></ion-searchbar>
+        <ion-button id="profilepic" (click)="gotoprofile()"><ion-icon  name="person"></ion-icon></ion-button>    
+    </ion-item>
+    <ion-list [hidden]="showSearch"  style="background-color: #356859;">
+        <ion-item style="--background:#356859 ;"  *ngFor = "let item of userList">
+            <ion-label>{{item.username}}</ion-label>
+        </ion-item>
+    </ion-list>
 </ion-content>
