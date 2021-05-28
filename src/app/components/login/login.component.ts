@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
       this._router.navigate(['front'])
     }
     
-    
+    msg = " "
     
    gotomainpage()
   {
@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     },
       error =>{
         console.log("Error: You have not logged in.")
+        this.msg = "Incorrect username or password"
       }
     )
   }
