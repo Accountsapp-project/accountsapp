@@ -1,2 +1,23 @@
-<ion-content></ion-content>
+<ion-content>
+   <ion-item style="--background: transparent;" lines="none">
+    <ion-button id="back" (click)="gotoprofile()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
+   </ion-item>
+    <ion-icon id="proficon" name="person-circle-outline"></ion-icon>
+    <p id="change-user" position="stacked" >New Username<ion-text color="danger">*</ion-text></p>
+    <ion-button id="username"><ion-item>
+        <ion-input required type="text" value="{{user.username}}" style="margin-top: 0mm;"></ion-input>
+    </ion-item></ion-button>
+    <p id="change-user" position="stacked" >Old Password<ion-text color="danger">*</ion-text></p>
+    <ion-button id="username"><ion-item>
+        <ion-input required type="text"  style="margin-top: 0mm;"></ion-input>
+    </ion-item></ion-button>
+    <p id="change-user" position="stacked" >New Password<ion-text color="danger">*</ion-text></p>
+    <ion-button id="username"><ion-item>
+        <ion-input required type="text"  style="margin-top: 0mm;"></ion-input>
+    </ion-item></ion-button>
+    <ion-button expand="full" id="Editprofile" (click)="gotomainpage()">
+        SAVE CHANGES 
+        <ion-icon name="save-outline" style="margin-left: 10%;"></ion-icon>
+    </ion-button>
+</ion-content>
   

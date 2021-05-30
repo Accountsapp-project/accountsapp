@@ -1,4 +1,47 @@
 
 ion-content{
---background: #66ccff;
+--background: #B9E4C9;
+}
+
+ion-item{
+    margin-top: 5mm;
+    --background: transparent;
+    --background-activated:transparent;
+    color:#356859;
+}
+
+#back{
+    --background: transparent;
+    color:#356859;
+}
+
+#change-user{
+    margin-top: 10%; 
+    margin-left: 10%; 
+    font-weight: bold; 
+    color: #356859;
+}
+
+#username{
+    --background:white;
+    margin-top: 0%;
+    margin-left: 10%;
+    border: 3px solid #356859;
+}
+
+#proficon{
+    margin-left: 35%;
+    font-size: 8em;
+    margin-top: 1%;
+}
+
+#Editprofile{
+    --color:#B9E4C9;
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-top: 15%;
+    --background:#356859;
+    font-weight: bold;
+    --background-activated:#37966f;
+    --color-activated:#356859;;
 }
