@@ -30,6 +30,15 @@ gotoprofile(){
 
 gotomainpage(){
   this._reg_service.updatenewpassword(this.newpassword)
+  this._reg_service.resetpassword(this.user).subscribe(
+    data =>{
+      console.log(data)
+    },
+    error =>{
+      console.log("password not changed")
+      console.log(this.user.password)
+    }
+  )
   this.router.navigate(['mainpage'])
 
 }

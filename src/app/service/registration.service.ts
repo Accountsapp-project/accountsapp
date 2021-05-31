@@ -18,6 +18,9 @@ export class RegistrationService {
   private stringContent = new BehaviorSubject<string>("default value");
   public shared= this.stringContent.asObservable();
 
+  private newpwdcontent=new BehaviorSubject<string>("default pwd");
+  public sharedpwd=this.newpwdcontent.asObservable();
+  
   private behUser = new BehaviorSubject<User>(this.user);
   public sharedUser = this.behUser.asObservable();
    
@@ -25,7 +28,7 @@ export class RegistrationService {
     this.behUser.next(user);
   }
   updatenewpassword(text){
-    this.stringContent.next(text);
+    this.newpwdcontent.next(text);
     this.newpasswordParam = new HttpParams()
     .set('newpassword',this.stringContent.value)
   }

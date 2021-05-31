@@ -1,23 +1,25 @@
 <ion-content>
+    <form (ngSubmit)="gotomainpage()">
    <ion-item style="--background: transparent;" lines="none">
     <ion-button id="back" (click)="gotoprofile()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
    </ion-item>
     <ion-icon id="proficon" name="person-circle-outline"></ion-icon>
     <p id="change-user" position="stacked" >New Username<ion-text color="danger">*</ion-text></p>
-    <ion-button id="username"><ion-item>
-        <ion-input required type="text" value="{{user.username}}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
-    </ion-item></ion-button>
+    <ion-item id="username">
+        <ion-input required type="text" [(ngModel)]="user.username"  [ngModelOptions]="{standalone:true}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
+    </ion-item>
     <p id="change-user" position="stacked" >Old Password<ion-text color="danger">*</ion-text></p>
-    <ion-button id="username"><ion-item>
-        <ion-input required type="text" [(ngModel)]="user.password" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
-    </ion-item></ion-button>
+    <ion-item id="oldpwd">
+        <ion-input required type="text" [(ngModel)]="user.password"  [ngModelOptions]="{standalone:true}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
+    </ion-item>
     <p id="change-user" position="stacked" >New Password<ion-text color="danger">*</ion-text></p>
-    <ion-button id="username"><ion-item>
-        <ion-input required type="text"  [(ngModel)]="newpassword" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
-    </ion-item></ion-button>
-    <ion-button expand="full" id="Editprofile" (click)="gotomainpage()">
+     <ion-item id="newpwd">
+        <ion-input required type="text"  [(ngModel)]="newpassword"  [ngModelOptions]="{standalone:true}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
+    </ion-item>
+    <ion-button expand="full" id="Editprofile" type="submit">
         SAVE CHANGES 
         <ion-icon name="save-outline" style="margin-left: 10%;"></ion-icon>
     </ion-button>
+</form>
 </ion-content>
   
