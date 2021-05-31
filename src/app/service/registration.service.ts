@@ -13,9 +13,10 @@ export class RegistrationService {
 
   constructor(private _http : HttpClient) { }
   usernameParam = null
+  newpasswordParam=null
  
-  private behuserName = new BehaviorSubject<string>("default value");
-  public sharedUsername = this.behuserName.asObservable();
+  private stringContent = new BehaviorSubject<string>("default value");
+  public shared= this.stringContent.asObservable();
 
   private behUser = new BehaviorSubject<User>(this.user);
   public sharedUser = this.behUser.asObservable();
@@ -23,11 +24,16 @@ export class RegistrationService {
   updateUser(user){
     this.behUser.next(user);
   }
+  updatenewpassword(text){
+    this.stringContent.next(text);
+    this.newpasswordParam = new HttpParams()
+    .set('newpassword',this.stringContent.value)
+  }
 
   updateData(text){
-    this.behuserName.next(text);
+    this.stringContent.next(text);
     this.usernameParam = new HttpParams()
-    .set('username',this.behuserName.value)
+    .set('username',this.stringContent.value)
   }
  
   public loginUserFromRemote(user : User):Observable<any>{
@@ -43,4 +49,8 @@ export class RegistrationService {
   public resgisterAsUser(user : User):Observable<any>{
     return this._http.post<any>("http://localhost:8090/signup",user)
 }
+
+  public resetpassword(user:User):Observable<any>{
+    return this._http.post<any>("http://localhost:8090/profileedit",user,{params:this.newpasswordParam})
+  }
 }

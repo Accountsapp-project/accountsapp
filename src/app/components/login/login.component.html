@@ -5,7 +5,7 @@
     <small id="errormsg" class="danger">{{msg}}</small>
   <ion-item id="username">
     <ion-label position="stacked" >Username<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input required type="text" [(value)]="text" #username username = "username" [(ngModel)]="user.username" [ngModelOptions]="{standalone:true}" ></ion-input>
+    <ion-input required type="text" [(ngModel)]="user.username" [ngModelOptions]="{standalone:true}" ></ion-input>
   </ion-item>
   <ion-item id="password">
     <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'app/class/user/user';
 import { RegistrationService } from 'app/service/registration.service';
-import {ProedService} from 'app/service/proed.service';
 import {EventEmitter} from '@angular/core'
 import { Observable } from 'rxjs';
 @Component({
@@ -14,7 +13,7 @@ export class LoginComponent implements OnInit {
   text="";
   user=new User();
   
-  constructor(private _router :Router,private _reg_service : RegistrationService,private _proed_service : ProedService) { }
+  constructor(private _router :Router,private _reg_service : RegistrationService) { }
   ngOnInit() {}
 
   showPassword =false;
@@ -53,7 +52,5 @@ export class LoginComponent implements OnInit {
       }
     }
     
-    updateText(text){
-      this._proed_service.updateData(this.user.username)
-    }
+    
 }

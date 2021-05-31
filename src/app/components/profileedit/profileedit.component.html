@@ -5,15 +5,15 @@
     <ion-icon id="proficon" name="person-circle-outline"></ion-icon>
     <p id="change-user" position="stacked" >New Username<ion-text color="danger">*</ion-text></p>
     <ion-button id="username"><ion-item>
-        <ion-input required type="text" value="{{user.username}}" style="margin-top: 0mm;"></ion-input>
+        <ion-input required type="text" value="{{user.username}}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
     </ion-item></ion-button>
     <p id="change-user" position="stacked" >Old Password<ion-text color="danger">*</ion-text></p>
     <ion-button id="username"><ion-item>
-        <ion-input required type="text"  style="margin-top: 0mm;"></ion-input>
+        <ion-input required type="text" [(ngModel)]="user.password" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
     </ion-item></ion-button>
     <p id="change-user" position="stacked" >New Password<ion-text color="danger">*</ion-text></p>
     <ion-button id="username"><ion-item>
-        <ion-input required type="text"  style="margin-top: 0mm;"></ion-input>
+        <ion-input required type="text"  [(ngModel)]="newpassword" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
     </ion-item></ion-button>
     <ion-button expand="full" id="Editprofile" (click)="gotomainpage()">
         SAVE CHANGES 
