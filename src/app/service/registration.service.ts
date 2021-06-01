@@ -21,16 +21,22 @@ export class RegistrationService {
   private newpwdcontent=new BehaviorSubject<string>("default pwd");
   public sharedpwd=this.newpwdcontent.asObservable();
   
+  private newUsernamecontent=new BehaviorSubject<string>("default username");
+  public sharedUsername=this.newUsernamecontent.asObservable();
+
   private behUser = new BehaviorSubject<User>(this.user);
   public sharedUser = this.behUser.asObservable();
    
   updateUser(user){
     this.behUser.next(user);
   }
-  updatenewpassword(text){
-    this.newpwdcontent.next(text);
+  updatenewUsernameAndPass(username,password){
+    this.newpwdcontent.next(password);
+    this.newUsernamecontent.next(username)
     this.newpasswordParam = new HttpParams()
-    .set('newpassword',this.stringContent.value)
+    .set('newpassword',this.newpwdcontent.value)
+    .set('newusername',this.newUsernamecontent.value)
+    
   }
 
   updateData(text){

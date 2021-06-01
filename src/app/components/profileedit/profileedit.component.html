@@ -1,4 +1,5 @@
 <ion-content>
+    <small id="errormsg" class="danger">{{msg}}</small>
     <form (ngSubmit)="gotomainpage()">
    <ion-item style="--background: transparent;" lines="none">
     <ion-button id="back" (click)="gotoprofile()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
@@ -6,7 +7,7 @@
     <ion-icon id="proficon" name="person-circle-outline"></ion-icon>
     <p id="change-user" position="stacked" >New Username<ion-text color="danger">*</ion-text></p>
     <ion-item id="username">
-        <ion-input required type="text" [(ngModel)]="user.username"  [ngModelOptions]="{standalone:true}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
+        <ion-input required type="text" [(ngModel)]="newUsername"  [ngModelOptions]="{standalone:true}" style="margin-bottom: 4mm;font-weight: bold;"></ion-input>
     </ion-item>
     <p id="change-user" position="stacked" >Old Password<ion-text color="danger">*</ion-text></p>
     <ion-item id="oldpwd">
