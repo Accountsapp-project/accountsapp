@@ -14,8 +14,10 @@ import {MainpageComponent} from './components/mainpage/mainpage.component'
 import { ProfileComponent } from './components/profile/profile.component';
 import {ProfileeditComponent}from './components/profileedit/profileedit.component';
 import { MainpagemenuComponent } from './components/mainpagemenu/mainpagemenu.component';
+import { GroupComponent } from './components/group/group.component';
+import { AddpeopleComponent } from './components/addpeople/addpeople.component';
 @NgModule({
-  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent,MainpageComponent,ProfileComponent,MainpagemenuComponent,ProfileeditComponent],
+  declarations: [AppComponent,LoginComponent,FrontComponent,SignupComponent,MainpageComponent,ProfileComponent,MainpagemenuComponent,ProfileeditComponent,GroupComponent,AddpeopleComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,RouterModule,HttpClientModule,FormsModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],

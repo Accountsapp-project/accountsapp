@@ -35,7 +35,9 @@ export class MainpageComponent implements OnInit {
     );
     this.router.navigate(['profile']);
   }
-  
+  gotogroup(){
+    this.router.navigate(['group'])
+  } 
 
   openMenu(){
     this.menu.enable(true,'mainpage-menu');

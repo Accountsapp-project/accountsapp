@@ -7,6 +7,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { MainpageComponent } from './components/mainpage/mainpage.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ProfileeditComponent } from './components/profileedit/profileedit.component';
+import { GroupComponent } from './components/group/group.component';
+import { AddpeopleComponent } from './components/addpeople/addpeople.component';
 const routes: Routes = [
   {
     path: 'home',
@@ -23,7 +25,9 @@ const routes: Routes = [
   {path : 'signup',component:SignupComponent},
   {path: 'mainpage',component:MainpageComponent},
   {path : 'profile',component:ProfileComponent},
-  {path : 'profileedit',component:ProfileeditComponent}
+  {path : 'profileedit',component:ProfileeditComponent},
+  {path : 'group',component:GroupComponent},
+  {path : 'addpeople',component:AddpeopleComponent}
 ];
 
 @NgModule({
