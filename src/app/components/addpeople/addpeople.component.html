@@ -1,4 +1,22 @@
 <ion-content>
-  <h2>Add members</h2>
-  <ion-button [hidden]="showTitle" (click)="openSearch()" id="searchbut" ><ion-icon name="search"></ion-icon></ion-button>
+  <ion-item style="--background: transparent;" lines="none">
+    <ion-button id="back" (click)="gotoCreateGroup()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
+   <div id="title">Add members</div>
+  </ion-item>
+  <ion-searchbar style="--background: white;margin-top:30px;color: black;"  (ionChange)="ionchange($event)" debounce="500"  ></ion-searchbar>
+  <ion-item id="selectedUsers" [hidden]="showSelected" >
+    <ion-label>
+      <div style="color: #356859;font-size: larger;">selected members</div>
+      <div *ngFor = "let item of selectedUser">{{item.username}}</div>
+    </ion-label>  
+  </ion-item>
+  <ion-list [hidden]="showSearch" style="background-color: #356859;">
+    <ion-item  *ngFor = "let item of userList" style="--background: #356859;" (click)="selectMember(item)"> 
+      <ion-label style="margin-bottom: 0px;">
+            <div style="font-size: larger;">{{item.username}}</div>
+            <p>{{item.phone}}</p>     
+      </ion-label>
+      <ion-icon [hidden]="selected(item)" name="checkmark-outline"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>

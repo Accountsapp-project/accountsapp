@@ -2,10 +2,23 @@ ion-content{
     --background :#B9E4C9;
     color:white;
 }
-#searchbut{
-    font-size: medium;
-    margin-left: 40%;
-    color:#B9E4C9;
+
+#selectedUsers{
+    --background: #B9E4C9;
+}
+
+#back{
+    margin-top: 5mm;
     --background: transparent;
     --background-activated:transparent;
+    color:#356859;
+}
+
+
+#title{
+    color: #356859;
+    margin-top:5mm;
+    margin-left: 7mm;
+    font-weight: bold;
+    font-size: larger;
 }
