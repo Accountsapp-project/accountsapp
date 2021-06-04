@@ -5,6 +5,7 @@ ion-content{
 
 #selectedUsers{
     --background: #B9E4C9;
+    
 }
 
 #back{
@@ -21,4 +22,18 @@ ion-content{
     margin-left: 7mm;
     font-weight: bold;
     font-size: larger;
+}
+#cross{
+    color:red;
+    margin-bottom: 1px;
+    margin-left: 0px;
+}
+#addmemb{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:#356859;
+    color: white;
+    text-align: center;
 }

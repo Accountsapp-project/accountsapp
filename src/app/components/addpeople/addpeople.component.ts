@@ -21,13 +21,35 @@ export class AddpeopleComponent implements OnInit {
     this._router.navigate(['group'])
   }
 
-  selectMember(item){
-    this.showSelected = false
-    if(!this.selectedUser.find(i => i.username === item.username)){
-      this.selectedUser.push(item)
-    }
-    console.log(this.selectedUser)
+  // selectMember(item){
+  //   this.showSelected = false
+  //   if(!this.selectedUser.find(i => i.username === item.username)){
+  //     this.selectedUser.push(item)
+  //   }
+  //   console.log(this.selectedUser)
+
   
+  // }
+  // deleteMember(item){
+  //   if(this.selectedUser.find(i => i.username === item.username))
+  //   {
+  //     this.selectedUser.splice(item,1);
+  //   }
+  // }
+  selectOrDelete(item)
+  {
+    this.showSelected = false
+    if(this.selectedUser.find(i => i.username === item.username))
+    {
+      this.selectedUser.splice(item,1);
+    }
+    else{
+      this.selectedUser.push(item);
+    }
+  }
+  returnList()
+  {
+    this.searchService.updateUserList(this.userList)
   }
   selected(item){
     if(this.selectedUser.find(i => i.username === item.username)){
@@ -38,7 +60,7 @@ export class AddpeopleComponent implements OnInit {
     }
   }
   ionchange(event){
-    this.showSearch = !this.showSearch 
+    this.showSearch = false 
     console.log(event.detail.value)
     this.searchService.updateData(event.detail.value);
     this.searchService.searchbarUser().subscribe(
