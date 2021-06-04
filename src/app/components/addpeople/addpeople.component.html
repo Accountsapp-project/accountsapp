@@ -1,16 +1,16 @@
-<ion-content>
-  <ion-item style="--background: transparent;" lines="none">
+<ion-content style="position: relative;">
+  <ion-item  style="--background: transparent;" lines="none">
     <ion-button id="back" (click)="gotoCreateGroup()" >  <ion-icon  name="chevron-back-outline"></ion-icon></ion-button>
    <div id="title">Add members</div>
   </ion-item>
   <ion-searchbar style="--background: white;margin-top:30px;color: black;"  (ionChange)="ionchange($event)" debounce="500"  ></ion-searchbar>
-  <ion-item id="selectedUsers" [hidden]="showSelected" >
-    <ion-label>
+  <ion-item   id="selectedUsers" [hidden]="showSelected" >
+    <ion-label >
       <div style="color: #356859;font-size: larger;">selected members</div>
       <div *ngFor = "let item of selectedUser">{{item.username}} <ion-button  (click)="selectOrDelete(item)"style="--background:transparent;margin-left: 0px;--background-activated:#356859;"><ion-icon  id="cross"name="close-circle-outline"></ion-icon></ion-button></div>
     </ion-label>  
-  </ion-item>
-  <ion-list  style="background-color: #356859 ;">
+  </ion-item>>
+  <ion-list [scrollTop]="" id="scrollbar" >
     <ion-item  *ngFor = "let item of userList" style="--background: #356859;" (click)="selectOrDelete(item)"> 
       <ion-label style="margin-bottom: 0px;">
             <div style="font-size: larger;">{{item.username}}</div>

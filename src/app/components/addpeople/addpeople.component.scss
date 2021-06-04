@@ -4,8 +4,11 @@ ion-content{
 }
 
 #selectedUsers{
-    --background: #B9E4C9;
-    
+    --background: #B9E4C9;position: relative;
+   position: -webkit-sticky;
+   position: sticky;
+   top: 0;
+
 }
 
 #back{
@@ -17,6 +20,7 @@ ion-content{
 
 
 #title{
+   
     color: #356859;
     margin-top:5mm;
     margin-left: 7mm;
@@ -30,10 +34,23 @@ ion-content{
 }
 #addmemb{
     position: fixed;
+    margin-left: 0px;
+    margin-bottom: 0px;
     left: 0;
     bottom: 0;
     width: 100%;
     background-color:#356859;
     color: white;
     text-align: center;
+}
+
+#scrollbar{
+    position: static;
+    background-color: #356859;    width: 100%;
+    margin-bottom: 36px;
+    overflow: hidden;
+    overflow-y: auto;
+    ::-webkit-scrollbar {
+      display: none;
+    }
 }
