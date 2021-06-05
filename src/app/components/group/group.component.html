@@ -1,3 +1,21 @@
 <ion-content>
-  <ion-button id="addpeople" (click)="gotoaddpeople()"> Add people <ion-icon name="person-add-outline"></ion-icon></ion-button>
+  <header>
+    <ion-item style="--background: transparent;margin-top: 5%;" lines="none">
+    <ion-button id="back" (click)="gotomainpage()"><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+    <h1 id="h1">Create Group </h1>
+  </ion-item>
+  </header>
+  <p id="change-user" position="stacked" >Enter group name<ion-text color="danger"></ion-text></p>
+  <ion-item id="name">
+      <ion-input required type="text"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
+  </ion-item>
+  <p id="change-user" position="stacked" >Description<ion-text color="danger"></ion-text></p>
+  <ion-item id="name">
+      <ion-input required type="text"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
+  </ion-item>
+  <p id="members" position="stacked" >Members<ion-text color="danger"></ion-text></p>
+  <ion-button expand="full" id="addpeople" type="submit" (click)="gotoaddpeople()"> Add people 
+    <ion-icon name="person-add-outline" style="margin-left: 10%;"></ion-icon>
+  </ion-button>
+  <ion-button id="bottom" expand="full" type="submit">Create Group</ion-button>
 </ion-content>

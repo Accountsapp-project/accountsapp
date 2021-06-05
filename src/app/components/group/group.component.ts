@@ -21,4 +21,8 @@ export class GroupComponent implements OnInit {
     this.router.navigate(["addpeople"]);
   }
 
+  gotomainpage(){
+    this.router.navigate(["mainpage"]);
+  }
+
 }
