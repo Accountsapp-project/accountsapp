@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'app/class/user/user';
 import { RegistrationService } from 'app/service/registration.service';
+import { SearchService } from 'app/service/search.service';
 import { from } from 'rxjs';
 import { LoginComponent } from '../login/login.component';
 import { MainpageComponent} from '../mainpage/mainpage.component';
@@ -12,10 +13,17 @@ import { MainpageComponent} from '../mainpage/mainpage.component';
   styleUrls: ['./group.component.scss'],
 })
 export class GroupComponent implements OnInit {
-
-  constructor(private router:Router,private _reg_service : RegistrationService) { }
-
-  ngOnInit() {}
+  selectedUser:Array<User>;
+  constructor(private router:Router,private searchService:SearchService) { }
+  groupname:string
+  description:string
+  ngOnInit() {
+      this.searchService.sharedUser.subscribe(
+        data=>{
+          this.selectedUser = data
+        }
+      )
+  }
 
   gotoaddpeople(){
     this.router.navigate(["addpeople"]);

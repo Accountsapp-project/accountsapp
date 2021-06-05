@@ -7,15 +7,26 @@
   </header>
   <p id="change-user" position="stacked" >Enter group name<ion-text color="danger"></ion-text></p>
   <ion-item id="name">
-      <ion-input required type="text"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
+      <ion-input required type="text" [(ngModel)]="groupname" [ngModelOptions]="{standalone:true}"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
   </ion-item>
   <p id="change-user" position="stacked" >Description<ion-text color="danger"></ion-text></p>
   <ion-item id="name">
-      <ion-input required type="text"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
+      <ion-input required type="text"  [(ngModel)]="description" [ngModelOptions]="{standalone:true}"  style="font-weight: bold;color:#356859;font-size: larger;"></ion-input>
   </ion-item>
+ <ion-item  style="--background: transparent;" lines="none">
   <p id="members" position="stacked" >Members<ion-text color="danger"></ion-text></p>
   <ion-button expand="full" id="addpeople" type="submit" (click)="gotoaddpeople()"> Add people 
     <ion-icon name="person-add-outline" style="margin-left: 10%;"></ion-icon>
   </ion-button>
+ </ion-item>
+  <ion-list [scrollTop]="true" style="background-color: transparent;">
+    <ion-item lines="none" id="selectedUsers" >
+      <ion-label> You</ion-label>
+    </ion-item>
+    <ion-item  lines="none" id="selectedUsers" *ngFor = "let item of selectedUser">
+      <ion-label>{{item.username}}</ion-label>
+    </ion-item>
+  </ion-list>
+  
   <ion-button id="bottom" expand="full" type="submit">Create Group</ion-button>
 </ion-content>

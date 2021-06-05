@@ -4,9 +4,8 @@ ion-content{
 }
 
 #addpeople{
-    margin-top: 40%;
-    margin-left: 28%;
-    margin-right: 30%;
+    margin-left: 40%;
+    margin-top: 2em;
     font-weight: bold;
     --color:#B9E4C9;
     --background:#356859;
@@ -44,17 +43,18 @@ ion-content{
 }
 
 #bottom{
-    position: absolute;
-    bottom: 0px;
-    display: block;
-    width: 100%;
-    --color:#B9E4C9;
+    position: fixed;
     margin-left: 0px;
-    // margin-right: 30%;
     margin-bottom: 0px;
-     margin-top: 20%;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color:#356859;
+    color:#B9E4C9;
+    text-align: center;
     --background:#356859;
-    font-weight: bold;
+   border:3px #B9E4C9 solid;
     --background-activated:#37966f;
     --color-activated:#356859;;
 }
@@ -62,7 +62,16 @@ ion-content{
 #members{
     font-size:larger;
     margin-top: 10%; 
-    margin-left: 10%; 
+    margin-left: 6%; 
     font-weight: bolder; 
     color: #356859;
+}
+
+#selectedUsers{
+    --background: transparent;
+    color: #356859;
+    margin-left: 6%; 
+    font-size: larger;
+    overflow-y: auto;
+    
 }

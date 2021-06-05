@@ -49,7 +49,8 @@ export class AddpeopleComponent implements OnInit {
   }
   returnList()
   {
-    this.searchService.updateUserList(this.userList)
+    this.searchService.updateUserList(this.selectedUser)
+    this._router.navigate(['group'])
   }
   selected(item){
     if(this.selectedUser.find(i => i.username === item.username)){
