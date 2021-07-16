@@ -12,7 +12,7 @@ import { SearchService } from 'app/service/search.service';
 export class AddpeopleComponent implements OnInit {
   showSearch = true
   showSelected = true
-  public selectedUser :Array<User> =[]
+  public selectedUser :Array<string> =[]
   constructor(private _router:Router,private searchService:SearchService) { }
  
   ngOnInit() {}
@@ -39,7 +39,7 @@ export class AddpeopleComponent implements OnInit {
   selectOrDelete(item)
   {
     this.showSelected = false
-    if(this.selectedUser.find(i => i.username === item.username))
+    if(this.selectedUser.find(i => i === item))
     {
       this.selectedUser.splice(item,1);
     }
@@ -47,13 +47,13 @@ export class AddpeopleComponent implements OnInit {
       this.selectedUser.push(item);
     }
   }
-  returnList()
+  returnList() 
   {
     this.searchService.updateUserList(this.selectedUser)
     this._router.navigate(['group'])
   }
   selected(item){
-    if(this.selectedUser.find(i => i.username === item.username)){
+    if(this.selectedUser.find(i => i === item)){
        return false
     }
     else{

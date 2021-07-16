@@ -19,16 +19,26 @@ export class SearchService {
     .set("searchbar",this.content.value)
   }
 
-  a:Array<User>=[]
+  a:Array<string>=[]
   public searchbarUser():Observable<any>{
     return this._http.get<any>("http://localhost:8090/mainpage",{params : this.params})
   }
 
-  private userListcontent=new BehaviorSubject<Array<User>>(this.a)
+  private userListcontent=new BehaviorSubject<Array<string>>(this.a)
   public sharedUser=this.userListcontent.asObservable();
+  
   updateUserList(a)
   {
     this.userListcontent.next(a);
     console.log(this.userListcontent)
   }
+  
+
+  
+
+  
+
+
+
+
 }
