@@ -9,14 +9,14 @@
       <div style="color: #356859;font-size: larger;">selected members</div>
       <div style="float: left;color: #356859;padding-top: 1mm;" *ngFor = "let item of selectedUser">{{item}} <ion-button  (click)="selectOrDelete(item)"style="--background:transparent;margin-left: 0px;--background-activated:#356859;margin-bottom:4mm ;"><ion-icon  id="cross"name="close-circle-outline"></ion-icon></ion-button></div>
     </ion-label>  
-  </ion-item>>
+  </ion-item>
   <ion-list [hidden]="showSearch" [scrollTop]="true" id="scrollbar" >
-    <ion-item  *ngFor = "let item  of userList" style="--background: #356859;" (click)="selectOrDelete(item.username)"> 
+    <ion-item  *ngFor = "let item  of userList" style="--background: #356859;" (click)="selectOrDelete(item)"> 
       <ion-label style="margin-bottom: 0px;">
             <div style="font-size: larger;">{{item.username}}</div>
             <p>{{item.phone}}</p>     
       </ion-label>
-      <ion-icon [hidden]="selected(item)" name="checkmark-outline"></ion-icon>
+      <ion-icon [hidden]="selected(item.username)" name="checkmark-outline"></ion-icon>
     </ion-item>
   </ion-list>
   <ion-button (click)="returnList()" id="addmemb" expand="full">Add Members</ion-button>

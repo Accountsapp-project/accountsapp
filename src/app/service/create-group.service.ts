@@ -34,6 +34,6 @@ export class CreateGroupService {
   // }
 
   public createGroup(group:Group):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/group",group,{params : this.userListParam})
+    return this._http.post<any>("http://localhost:8090/group/update",group,{params : this.userListParam})
   }
 }

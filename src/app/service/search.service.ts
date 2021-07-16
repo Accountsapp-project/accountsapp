@@ -21,7 +21,7 @@ export class SearchService {
 
   a:Array<string>=[]
   public searchbarUser():Observable<any>{
-    return this._http.get<any>("http://localhost:8090/mainpage",{params : this.params})
+    return this._http.get<any>("http://localhost:8090/user/mainpage",{params : this.params})
   }
 
   private userListcontent=new BehaviorSubject<Array<string>>(this.a)

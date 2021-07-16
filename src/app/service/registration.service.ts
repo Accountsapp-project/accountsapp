@@ -46,20 +46,20 @@ export class RegistrationService {
   }
  
   public loginUserFromRemote(user : User):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/login",user);
+    return this._http.post<any>("http://localhost:8090/user/login",user);
   }
    
   public fetchUserData():Observable<any>{
-    return this._http.get<any>("http://localhost:8090/profile",{params : this.usernameParam})
+    return this._http.get<any>("http://localhost:8090/user/profile",{params : this.usernameParam})
   }
 
   
 
   public resgisterAsUser(user : User):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/signup",user)
+    return this._http.post<any>("http://localhost:8090/user/signup",user)
 }
 
   public resetpassword(user:User):Observable<any>{
-    return this._http.post<any>("http://localhost:8090/profileedit",user,{params:this.newpasswordParam})
+    return this._http.post<any>("http://localhost:8090/user/profileedit",user,{params:this.newpasswordParam})
   }
 }

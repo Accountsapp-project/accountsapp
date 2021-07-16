@@ -21,30 +21,17 @@ export class AddpeopleComponent implements OnInit {
     this._router.navigate(['group'])
   }
 
-  // selectMember(item){
-  //   this.showSelected = false
-  //   if(!this.selectedUser.find(i => i.username === item.username)){
-  //     this.selectedUser.push(item)
-  //   }
-  //   console.log(this.selectedUser)
-
   
-  // }
-  // deleteMember(item){
-  //   if(this.selectedUser.find(i => i.username === item.username))
-  //   {
-  //     this.selectedUser.splice(item,1);
-  //   }
-  // }
   selectOrDelete(item)
   {
-    this.showSelected = false
-    if(this.selectedUser.find(i => i === item))
+    this.showSelected = false  
+    if(this.selectedUser.find(i => i === item.username))
     {
-      this.selectedUser.splice(item,1);
+      var userIndex = this.selectedUser.indexOf(item.username);
+      this.selectedUser.splice(userIndex,1);  
     }
     else{
-      this.selectedUser.push(item);
+      this.selectedUser.push(item.username);
     }
   }
   returnList() 
